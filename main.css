@@ -1,0 +1,13 @@
+.well {
+	margin-top: 120px;
+}
+
+input[type=text] {
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #888888;
+}
+
+li {
+	padding-top: 15px;
+}
