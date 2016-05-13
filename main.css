@@ -1,11 +1,19 @@
+html, body {
+	background-color: #333333;
+	color: #ffffff;
+}
+
 .well {
 	margin-top: 120px;
+	background-color: #666666;
+	border-color: #111111;
 }
 
 input[type=text] {
 	border-radius: 5px;
 	border-width: 1px;
 	border-color: #888888;
+	color: #333333;
 }
 
 li {
