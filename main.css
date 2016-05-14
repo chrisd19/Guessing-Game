@@ -16,6 +16,11 @@ input[type=text] {
 	color: #333333;
 }
 
+h2, h3 {
+	font-weight: normal;
+	padding: 10px 0px;
+}
+
 li {
 	padding-top: 15px;
 }
