@@ -23,8 +23,9 @@
 			$('#guess').val("");
 			checkGuess();
 
-			var remainingUpdate = "Guesses Remaining: " + guessesRemaining;
-			$('#remaining').text(remainingUpdate);
+			$('#remaining').text(function() {
+				return "Guesses Remaining: " + guessesRemaining;
+			});
 		}
 	}
 
@@ -68,7 +69,7 @@
 		previousGuesses.push(playersGuess);
 
 		if (message !== undefined) {
-			$('.feedback').children('#message').text(function() {
+			$('#message').text(function() {
 				return message;
 			}).slideDown();
 			if (previousGuesses.length > 0) {
@@ -119,7 +120,7 @@
 	    hintUsed = false;
 
 	    $('#play-again').fadeOut(200);
-	    $('#win-or-lose').delay(200).fadeOut();
+	    $('#win-or-lose').delay(200).fadeOut().delay(1000).animate({'font-size': '10em'});
 	    $('.well').delay(800).fadeIn();
 	    $('#message').slideUp();
 	    $('#guidance').slideUp();
@@ -135,8 +136,10 @@
 		$('.well').fadeOut();
 		$('#win-or-lose').text(function() {
 			return "You Win!";
-		}).css('color', 'hsla(115, 100%, 60%, 1)').delay(600).fadeIn(2000);
-		$('#play-again').delay(2000).fadeIn();
+		}).css('color', 'hsla(115, 100%, 60%, 1)').delay(600).fadeIn(2000).animate({
+			"font-size": "15em"
+		}, 1000);
+		$('#play-again').delay(4000).fadeIn();
 	}
 
 	// acknowledgment of loser
@@ -145,8 +148,10 @@
 		$('.well').fadeOut();
 		$('#win-or-lose').text(function() {
 			return "You Lose!";
-		}).css('color', 'hsla(0, 100%, 52%, 1)').delay(600).fadeIn(2000);
-		$('#play-again').delay(2000).fadeIn();
+		}).css('color', 'hsla(0, 100%, 52%, 1)').delay(600).fadeIn(2000).animate({
+			"font-size": "15em"
+		}, 1000);
+		$('#play-again').delay(4000).fadeIn();
 	}
 
 	/* **** Event Listeners/Handlers ****  */
